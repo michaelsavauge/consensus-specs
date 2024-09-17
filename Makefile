@@ -25,9 +25,6 @@ SSZ_DIR = ./ssz
 SYNC_DIR = ./sync
 FORK_CHOICE_DIR = ./fork_choice
 
-# Get absolute path to the preinstall requirements, this uses := for immediate evaluation.
-REQUIREMENTS_PREINSTALLATION := $(realpath requirements_preinstallation.txt)
-
 # To check generator matching:
 #$(info $$GENERATOR_TARGETS is [${GENERATOR_TARGETS}])
 
@@ -100,8 +97,7 @@ dist_upload:
 	python3 -m twine upload dist/*
 
 build_wheel: install_test pyspec
-	. venv/bin/activate; \
-	python3 -m pip install -r requirements_preinstallation.txt; \
+	. venv/bin/activate && \
 	python3 -m build --no-isolation --outdir ./dist ./
 
 # "make generate_tests" to run all generators

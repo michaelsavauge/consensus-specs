@@ -528,14 +528,14 @@ setup(
     include_package_data=False,
     package_data={
         'configs': ['*.yaml'],
+        'eth2spec': ['VERSION.txt'],
         'presets': ['**/*.yaml', '**/*.json'],
         'specs': ['**/*.md'],
-        'eth2spec': ['VERSION.txt'],
-        'sync': ['optimistic.md']
+        'sync': ['optimistic.md'],
     },
     package_dir={
-        "eth2spec": "tests/core/pyspec/eth2spec",
         "configs": "configs",
+        "eth2spec": "tests/core/pyspec/eth2spec",
         "presets": "presets",
         "specs": "specs",
         "sync": "sync",
