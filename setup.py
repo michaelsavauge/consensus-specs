@@ -570,7 +570,7 @@ setup(
         "eth-typing>=3.2.0,<4.0.0",
         "pycryptodome>=3.19.1",
         "py_ecc==6.0.0",
-        "milagro_bls_binding==1.9.0",
+        "==1.9.0",
         "remerkleable==0.1.28",
         "trie>=3,<4",
         RUAMEL_YAML_VERSION,
